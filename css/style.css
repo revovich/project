@@ -12,7 +12,6 @@ body {
   background: #000;
   color: white;
   font-family: "Oxygen", sans-serif;
-  /* overflow-y: hidden; */
 }
 
 a {
@@ -34,7 +33,6 @@ img {
 }
 
 aside {
-  display: flex;
   position: fixed;
   background: #222;
   top: 0;
@@ -64,7 +62,6 @@ aside a {
   text-transform: uppercase;
   font-size: 0.75em;
   letter-spacing: 2px;
-  letter-spacing: 2px;
 }
 
 aside p {
@@ -89,7 +86,7 @@ main {
   max-width: 980px;
   background: #000;
   margin-left: 20%;
-  padding: 12px 50px;
+  padding: 12px 50px 12px 50px;
 }
 
 header {
@@ -187,13 +184,16 @@ header h5 {
 }
 
 .row-halves {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 20px 0;
+  -webkit-flex-pack: justify;
 }
 
 .row-halves .col {
-  width: 40%;
+  width: 49%;
 }
 
 .col {
@@ -210,6 +210,7 @@ label {
 form input[type="text"], select, textarea {
   width: 100%;
   padding: 12px;
+  border: none;
   border: 1px solid #222;
   background: transparent;
   margin-top: 6px;
@@ -227,6 +228,7 @@ input[type="submit"] {
   background-color: transparent;
   color: #b2b2b2;
   text-transform: uppercase;
+  padding: 12px 20px;
   border: 1px solid #222;
   cursor: pointer;
   transition: all .5s;
@@ -283,10 +285,10 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 601px) {
-  .aside {
+  aside {
     display: none;
   }
-  .main {
+  main {
     width: 100%;
     margin: 0 auto;
     padding: 12px 25px;
